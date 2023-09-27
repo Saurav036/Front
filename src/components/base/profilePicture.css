@@ -1,0 +1,70 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  :root {
+    --clr-1: #ffffff;
+    --clr-2: #ffffff;
+    --clr-3: #de0ea3;
+    --clr-4: #b80688;
+    --clr-5: #efca11;
+  }
+  
+  /* body {
+    background: var(--clr-2);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  } */
+  
+  .card {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url('https://images.mid-day.com/images/images/2023/jan/hugh-jan-elven_d.jpg');
+
+    border-radius: 50%;
+    background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-size: cover;
+  border-width:0.7em;
+    border-style:solid;
+    border-color:white;
+  
+    position: relative;
+  }
+  
+  .card::before,
+  .card::after { /* content: url('https://images.mid-day.com/images/images/2023/jan/hugh-jan-elven_d.jpg'); */
+    aspect-ratio: 1/1;
+    content:'';
+    position: absolute;
+    inset: -1em;
+    z-index: -1;
+    background: conic-gradient(
+      from var(--gradient-angle),
+      var(--clr-3),
+      var(--clr-4),
+      var(--clr-5),
+      var(--clr-4),
+      var(--clr-3)
+    );
+    border-radius: 50%;
+    animation: rotation 10s linear infinite;
+  }
+  
+  .card::after {
+    filter: blur(0.2em);
+  }
+  
+  @keyframes rotation {
+    0% {
+      --gradient-angle: 0deg;
+    }
+    100% {
+      --gradient-angle: 360deg;
+    }
+  }
+

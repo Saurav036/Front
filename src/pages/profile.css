@@ -1,0 +1,42 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    /* Add background image for profile picture */
+  }
+  
+  .profile-info {
+    margin-left: 20px;
+  }
+  
+  .profile-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .stats {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .stats span {
+    margin-right: 20px;
+  }
+  
+  .profile-posts {
+    /* Add styling for user posts */
+  }
+  
