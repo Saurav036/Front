@@ -1,7 +1,23 @@
 import React from 'react';
 import './profile.css';
+import {useState, useEffect} from 'react'
 
 const Profile = () => {
+  const [posts , setPosts] = useState([])
+  let data = [
+    {id:1, name:'ankit', },
+    {id:2, name:'ankit', },
+    {id:3, name:'ankit', },
+    {id:4, name:'ankit', },
+    {id:5, name:'ankit', },
+  ]
+
+
+  useEffect(()=>{
+    setTimeout(()=>{setPosts(data)}, 2000)
+  }, [])
+
+
   return (
     <div className="profile-container">
       <div className="profile-header">
@@ -20,6 +36,15 @@ const Profile = () => {
       </div>
       <div className="profile-posts">
         {/* Display user posts */}
+        {posts?.length>0 ? <ol>
+
+          {posts.map(d=><li>
+
+            {d.name}
+          </li>
+            )}
+        </ol>
+          :'Loading...'}
       </div>
     </div>
   );

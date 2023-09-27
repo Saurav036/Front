@@ -1,10 +1,11 @@
 import React from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div style={{display:'flex', justifyContent:'center'}} /*  className="login-container" */>
-      {/* <div className="login-form">
+    <div style={{display:'flex', justifyContent:'center', flexDirection:'column', alignItems:'center'}} /*  className="login-container" */>
+       <div className="login-form">
         <h1 className="logo">Instagram</h1>
         <form>
           <input type="text" placeholder="Username" />
@@ -23,14 +24,14 @@ const Login = () => {
         <p>
           Don't have an account? <a href="#">Sign up</a>
         </p>
-      </div> */}
+      </div> 
 
-<div className="profile-picture">
-      <div className="story-border">
+{/* <div className="profile-picture">
+      <div className="story-border"> */}
         {/* Your profile picture goes here */}
-       <img src='https://images.mid-day.com/images/images/2023/jan/hugh-jan-elven_d.jpg' height={50} width={50}/>
-      </div>
-    </div>
+       {/* <img src='https://images.mid-day.com/images/images/2023/jan/hugh-jan-elven_d.jpg' height={50} width={50}/>
+      </div> */}
+    {/* </div> */}
       
 
 
